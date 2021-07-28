@@ -19,9 +19,21 @@ function compareGuesses(humanGuess, compGuess, targetNum) {
     if (compAbs <= humanAbs) {
       return false;
     }
-    else return "idk"
+    if (compAbs == humanAbs) {
+      return true;
+    } else return true;
   }
 }
 
-console.log(compareGuesses(3, 8, 1))
+function updateScore(winner) {
+  if (winner === "human") {
+    humanScore++;
+  } else {
+    computerScore++;
+  }
+}
 
+
+function advanceRound(){
+  currentRoundNumber ++ 
+}
